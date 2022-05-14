@@ -31,59 +31,40 @@ I used Desktop Qt 6.4.0 MinGW 64-bit build kit for setting up the project.
 If you want to put a project in Qt you have to use specific settings of an automatically generated project file with the extension .pro. 
 
 Here are my settings:
-* npm
-  ```sh
+* Qt .pro file:
+  ```
   QT       += core gui
+  greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+  CONFIG += c++11
 
-CONFIG += c++11
+  # You can make your code fail to compile if it uses deprecated APIs.
+  # In order to do so, uncomment the following line.
+  #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-# You can make your code fail to compile if it uses deprecated APIs.
-# In order to do so, uncomment the following line.
-#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+  SOURCES += \
+      customer.cpp \
+      main.cpp \
+      menu.cpp \
+      order.cpp \
+      product.cpp \
+      seller.cpp
 
-SOURCES += \
-    customer.cpp \
-    main.cpp \
-    menu.cpp \
-    order.cpp \
-    product.cpp \
-    seller.cpp
+  HEADERS += \
+      customer.h \
+      delivery.h \
+      menu.h \
+      order.h \
+      product.h \
+      seller.h
 
-HEADERS += \
-    customer.h \
-    delivery.h \
-    menu.h \
-    order.h \
-    product.h \
-    seller.h
+  FORMS += \
+      menu.ui
 
-FORMS += \
-    menu.ui
-
-# Default rules for deployment.
-qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
-!isEmpty(target.path): INSTALLS += target
+  # Default rules for deployment.
+  qnx: target.path = /tmp/$${TARGET}/bin
+  else: unix:!android: target.path = /opt/$${TARGET}/bin
+  !isEmpty(target.path): INSTALLS += target
   ```
 
-### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-<p align="right"><<a href="#top">back to top</a>></p>
+<p align="left"><<a href="#top">back to top</a>></p>
