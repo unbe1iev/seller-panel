@@ -16,7 +16,9 @@
 </details>
 
 ## About The Project
-[![Product Name Screen Shot][product-screenshot]](https://imgur.com/a/Ak9Rnvv)
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
+
+https://imgur.com/a/Ak9Rnvv
 This is a simple simple seller's order panel that can:
 * Display his orders
 * Add new randomized order to his panel
