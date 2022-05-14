@@ -16,7 +16,7 @@
 </details>
 
 ## About The Project
-<img src='https://imgur.com/a/Ak9Rnvv' alt='menu orders panel' style='max-width: 100%;'>
+<img src='https://i.imgur.com/svidoB5.png' alt='menu orders panel' style='max-width: 100%;'>
 
 This is a simple simple seller's order panel that can:
 * Display his orders
